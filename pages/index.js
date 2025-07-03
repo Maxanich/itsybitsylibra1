@@ -5,6 +5,9 @@ export default function Home() {
   return (
     <div>
       <header className="header">
+  <Logo />
+</header>
+
         <Logo />
       </header>
       {/* остальной код */}
