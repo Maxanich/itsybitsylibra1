@@ -36,7 +36,7 @@ const puzzles = [
 export default function Home() {
   return (
     <div>
-      <header className="header">itsybitsylibra - Обмен паззлами</header>
+      <header className="header">itsybitsylibra</header>
       <div className="container">
         <h2>Последние добавленные паззлы</h2>
         {puzzles.map(puzzle => (
