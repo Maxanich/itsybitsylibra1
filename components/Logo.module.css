@@ -1,0 +1,56 @@
+.logo {
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0ff; /* яркий голубой */
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+  animation: flicker 3s infinite;
+  user-select: none;
+}
+
+.logo span {
+  animation: flickerLetter 3s infinite;
+  margin: 0 1px;
+}
+
+/* Немного разная задержка для каждой буквы */
+.logo span:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+.logo span:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 5px #0ff,
+      0 0 10px #0ff,
+      0 0 20px #0ff,
+      0 0 40px #0ff;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+@keyframes flickerLetter {
+  0%, 50%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 5px #0ff,
+      0 0 10px #0ff,
+      0 0 20px #0ff;
+  }
+  25%, 75% {
+    opacity: 0.5;
+    text-shadow: none;
+  }
+}
